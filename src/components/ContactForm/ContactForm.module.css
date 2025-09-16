@@ -1,0 +1,264 @@
+.contact {
+  padding: 0;
+  background: #000;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* Coluna Promocional (Esquerda) */
+.promoColumn {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.promoContent {
+  max-width: 500px;
+  color: white;
+}
+
+.promoTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.promoSubtitle {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.consultantsSection {
+  margin-top: var(--spacing-xl);
+}
+
+.consultantsLabel {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.8;
+}
+
+.consultantsList {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.consultant {
+  display: flex;
+  align-items: center;
+}
+
+.consultantAvatar {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #555;
+}
+
+/* Coluna do Formulário (Direita) */
+.formColumn {
+  position: relative;
+  background: url('/pexels-pixabay-265004 1.png') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.formBackground {
+  position: relative;
+  z-index: 2;
+}
+
+.formContent {
+  background: white;
+  padding: var(--spacing-xl);
+  border: 1px solid #000;
+  border-radius: 0;
+  max-width: 400px;
+  width: 100%;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.form {
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-md);
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  background: white;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitButton {
+  width: 100%;
+  background: #20B2AA;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #1a9b94;
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.successMessage {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 0;
+  text-align: center;
+  font-weight: 500;
+  margin-top: var(--spacing-sm);
+  border: 1px solid #c3e6cb;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .promoColumn {
+    order: 2;
+    padding: var(--spacing-lg);
+    min-height: 50vh;
+  }
+  
+  .formColumn {
+    order: 1;
+    padding: var(--spacing-lg);
+    min-height: 50vh;
+  }
+  
+  .promoTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .promoTitle {
+    font-size: 1.75rem;
+  }
+  
+  .formColumn {
+    padding: var(--spacing-md);
+  }
+  
+  .formContent {
+    max-width: 100%;
+    padding: var(--spacing-lg);
+  }
+  
+  .consultantsList {
+    justify-content: center;
+  }
+  
+  .consultantAvatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .promoTitle {
+    font-size: 1.5rem;
+  }
+  
+  .formColumn {
+    padding: var(--spacing-sm);
+  }
+  
+  .formContent {
+    padding: var(--spacing-md);
+  }
+  
+  .submitButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .consultantAvatar {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
