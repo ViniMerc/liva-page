@@ -12,11 +12,13 @@ Site Liva construído com Next.js.
 ## 🚀 Como Executar
 
 1. **Instale as dependências:**
+
    ```bash
    npm install
    ```
 
 2. **Execute o servidor de desenvolvimento:**
+
    ```bash
    npm run dev
    ```
@@ -33,9 +35,6 @@ Site Liva construído com Next.js.
 - `src/templates/` - Templates das seções (Header, Hero, About, ContactForm, PropertiesGrid, Footer)
 - `public/` - Imagens, ícones e fontes
 
-## 🏗️ Scripts Disponíveis
+## 🏗️ Demonstração
 
-- `npm run dev` - Servidor de desenvolvimento
-- `npm run build` - Build para produção
-- `npm run start` - Servidor de produção
-- `npm run lint` - Verificação de código
+Confira a demonstração em [liva-page.vercel.app](https://liva-page.vercel.app).
