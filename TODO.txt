@@ -14,7 +14,9 @@ Formulario
     Adicionar envio do formulario
 
 Empreendimentos 
-    Estilos gerais
+    Ajustar resolucao das imagens maiores 
+    Ajustar overlay ao passar o mouse
+    Ajustar os filtros 
 
 Footer
     Estilos Gerais

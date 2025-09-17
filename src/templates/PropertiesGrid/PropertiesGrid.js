@@ -81,9 +81,18 @@ export default function PropertiesGrid() {
       price: "A partir de R$ 420.000",
       featured: false,
     },
+    {
+      id: 9,
+      name: "PLATINUM RESIDENCE",
+      image: "/images/properties/Rectangle 6-1.png",
+      status: "PRÉ LANÇAMENTO",
+      description: "Apartamentos de 2 e 3 dormitórios com área gourmet",
+      price: "A partir de R$ 390.000",
+      featured: false,
+    },
   ]);
 
-  const [visibleProperties, setVisibleProperties] = useState(9);
+  const [visibleProperties, setVisibleProperties] = useState(12);
 
   const loadMore = () => {
     setVisibleProperties((prev) => Math.min(prev + 3, properties.length));
@@ -189,6 +198,37 @@ export default function PropertiesGrid() {
                 )}
                 <div className={styles.propertyNameOverlay}>
                   {property.name}
+                </div>
+                
+                {/* Overlay com informações no hover */}
+                <div className={styles.hoverOverlay}>
+                  <div className={styles.overlayContent}>
+                    <div className={styles.overlayTop}>
+                      <div className={styles.overlayStatus}>{property.status}</div>
+                    </div>
+                    
+                    <div className={styles.overlayBottom}>
+                      <h3 className={styles.overlayTitle}>{property.name}</h3>
+                      
+                      <div className={styles.overlayInfo}>
+                        <div className={styles.locationInfo}>
+                          <span className={styles.cityLabel}>Cidade</span>
+                          <span className={styles.cityName}>Barra Velha</span>
+                          <span className={styles.neighborhoodLabel}>Bairro</span>
+                          <span className={styles.neighborhoodName}>Tabuleiro</span>
+                        </div>
+                        
+                        <div className={styles.propertyDetails}>
+                          <div className={styles.detailItem}>
+                            <span className={styles.detailText}>{property.description}</span>
+                          </div>
+                          <div className={styles.detailItem}>
+                            <span className={styles.detailText}>Condomínio Fechado</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
