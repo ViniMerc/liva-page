@@ -1,9 +1,9 @@
-import Header from "../components/Header/Header";
-import Hero from "../components/Hero/Hero";
-import About from "../components/About/About";
-import ContactForm from "../components/ContactForm/ContactForm";
-import PropertiesGrid from "../components/PropertiesGrid/PropertiesGrid";
-import Footer from "../components/Footer/Footer";
+import Header from "../templates/Header/Header";
+import Hero from "../templates/Hero/Hero";
+import About from "../templates/About/About";
+import ContactForm from "../templates/ContactForm/ContactForm";
+import PropertiesGrid from "../templates/PropertiesGrid/PropertiesGrid";
+import Footer from "../templates/Footer/Footer";
 import styles from "./page.module.css";
 
 export default function Home() {

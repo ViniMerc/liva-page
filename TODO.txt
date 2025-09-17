@@ -1,0 +1,26 @@
+Header 
+    Ajuste de imagem da logo em resolucao maior 
+    ajuste das fontes usadas 
+    adicionar scroll to ao clicar no menu
+    
+Carrossel
+    ajustar alinamento e estilo dos textos 
+    ajustar botao de voltar da esquerda (icone nao deve ter opacidade)
+    Altura dessa bloco deve ser 751px
+
+Sobre 
+    Ajustar resolucao da imagem 
+    Ajustar estilos dos textos 
+    Ajustar estilo do botao
+
+Formulario 
+    Ajustar estilos gerais
+    Adicionar envio do formulario
+
+Empreendimentos 
+    Estilos gerais
+
+Footer
+    Estilos Gerais
+
+
