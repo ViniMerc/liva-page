@@ -1,6 +1,7 @@
+import { forwardRef } from 'react';
 import styles from './LivaButton.module.css';
 
-export default function LivaButton({ 
+const LivaButton = forwardRef(function LivaButton({ 
   children, 
   icon, 
   type = 'primary', 
@@ -9,7 +10,7 @@ export default function LivaButton({
   onClick,
   className = '',
   ...props 
-}) {
+}, ref) {
   const buttonClasses = [
     styles.button,
     styles[type],
@@ -23,6 +24,7 @@ export default function LivaButton({
       className={buttonClasses}
       disabled={disabled}
       onClick={onClick}
+      ref={ref}
       {...props}
     >
       {icon && (
@@ -37,4 +39,6 @@ export default function LivaButton({
       )}
     </button>
   );
-}
+});
+
+export default LivaButton;

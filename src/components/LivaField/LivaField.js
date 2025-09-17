@@ -1,41 +1,54 @@
 "use client";
 
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import styles from "./LivaField.module.css";
 
-export default function LivaField({
-  type = "text",
-  id,
-  name,
-  label,
-  value,
-  onChange,
-  placeholder,
-  required = false,
-  rows = 4,
-  className = "",
-  ...props
-}) {
+const LivaField = forwardRef(function LivaField(
+  {
+    type = "text",
+    id,
+    name,
+    label,
+    value,
+    onChange,
+    onBlur: onBlurProp,
+    onFocus: onFocusProp,
+    placeholder,
+
+    rows = 4,
+    className = "",
+    hasError = false,
+    ...props
+  },
+  ref
+) {
   const [isFocused, setIsFocused] = useState(false);
   const isTextarea = type === "textarea";
-  
-  // Determina se o label deve estar "flutuando" (no topo)
+
   const isLabelFloating = isFocused || (value && value.length > 0);
 
-  const handleFocus = () => {
+  const handleFocus = (e) => {
     setIsFocused(true);
+    if (onFocusProp) onFocusProp(e);
   };
 
-  const handleBlur = () => {
+  const handleBlur = (e) => {
     setIsFocused(false);
+    if (onBlurProp) onBlurProp(e);
   };
 
   return (
     <div className={`${styles.formGroup} ${className}`}>
-      <div className={`${styles.inputContainer} ${isTextarea ? styles.textareaContainer : ''}`}>
-        <label 
-          htmlFor={id} 
-          className={`${styles.label} ${isLabelFloating ? styles.labelFloating : styles.labelDefault}`}
+      <div
+        className={`${styles.inputContainer} ${
+          isTextarea ? styles.textareaContainer : ""
+        }`}
+      >
+        <label
+          htmlFor={id}
+          className={`${styles.label} ${
+            isLabelFloating ? styles.labelFloating : styles.labelDefault
+          }`}
         >
           {label}
         </label>
@@ -47,9 +60,11 @@ export default function LivaField({
             onChange={onChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            className={`${styles.textarea} ${isFocused ? styles.focused : ''}`}
+            className={`${styles.textarea} ${isFocused ? styles.focused : ""} ${
+              hasError ? styles.error : ""
+            }`}
             rows={rows}
-            required={required}
+            ref={ref}
             {...props}
           />
         ) : (
@@ -61,12 +76,21 @@ export default function LivaField({
             onChange={onChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            className={`${styles.input} ${isFocused ? styles.focused : ''}`}
-            required={required}
+            className={`${styles.input} ${isFocused ? styles.focused : ""} ${
+              hasError ? styles.error : ""
+            }`}
+            ref={ref}
             {...props}
           />
         )}
       </div>
+      {hasError && (
+        <div className={styles.errorMessage}>
+          *por favor, preencha corretamente
+        </div>
+      )}
     </div>
   );
-}
+});
+
+export default LivaField;
