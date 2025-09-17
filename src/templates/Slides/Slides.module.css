@@ -161,7 +161,18 @@
   }
 
   .overlay {
-    padding: 1.5rem 0 0 1.5rem;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .overlayContent {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 4rem;
   }
 
   .title {
@@ -202,7 +213,11 @@
   }
 
   .overlay {
-    padding: 1rem 0 0 1rem;
+    padding: 1rem;
+  }
+
+  .overlayContent {
+    margin-bottom: 3rem;
   }
 
   .title {
@@ -220,6 +235,5 @@
 
   .tag {
     font-size: 0.7rem;
-    padding: 0.4rem 0.8rem;
   }
 }

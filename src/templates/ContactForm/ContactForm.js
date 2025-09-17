@@ -266,6 +266,43 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
+
+          {/* Seção de consultores - separada para mobile */}
+          <div className={styles.consultantsSectionMobile}>
+            <p className={styles.consultantsLabel}>Consultores online</p>
+            <div className={styles.consultantsList}>
+              <div className={styles.consultant}>
+                <div className={styles.consultantAvatar}>
+                  <Image
+                    src="/images/contact/avatares.png"
+                    alt="Consultor 1"
+                    width={54}
+                    height={54}
+                  />
+                </div>
+              </div>
+              <div className={styles.consultant}>
+                <div className={styles.consultantAvatar}>
+                  <Image
+                    src="/images/contact/avatares (1).png"
+                    alt="Consultor 2"
+                    width={54}
+                    height={54}
+                  />
+                </div>
+              </div>
+              <div className={styles.consultant}>
+                <div className={styles.consultantAvatar}>
+                  <Image
+                    src="/images/contact/avatares (2).png"
+                    alt="Consultor 3"
+                    width={54}
+                    height={54}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

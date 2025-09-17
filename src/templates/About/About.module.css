@@ -118,6 +118,10 @@
     gap: var(--spacing-lg);
   }
 
+  .imagesColumn {
+    display: none;
+  }
+
   .textColumn {
     padding-left: 0;
     text-align: center;

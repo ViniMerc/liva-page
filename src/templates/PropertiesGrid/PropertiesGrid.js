@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import LivaButton from "../../components/LivaButton/LivaButton";
 import styles from "./PropertiesGrid.module.css";
@@ -93,6 +93,19 @@ export default function PropertiesGrid() {
   ]);
 
   const [visibleProperties, setVisibleProperties] = useState(12);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar se é mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const loadMore = () => {
     setVisibleProperties((prev) => Math.min(prev + 3, properties.length));
@@ -178,7 +191,7 @@ export default function PropertiesGrid() {
 
         {/* Grid de Propriedades */}
         <div className={styles.grid}>
-          {properties.slice(0, visibleProperties).map((property) => (
+          {properties.slice(0, isMobile ? 4 : visibleProperties).map((property) => (
             <div
               key={property.id}
               className={`${styles.propertyCard} ${
@@ -236,11 +249,13 @@ export default function PropertiesGrid() {
         </div>
 
         {/* Botão Carregar Mais */}
-        <div className={styles.loadMoreContainer}>
-          <button className={styles.loadMoreButton} onClick={loadMore}>
-            CARREGAR MAIS
-          </button>
-        </div>
+        {!isMobile && (
+          <div className={styles.loadMoreContainer}>
+            <button className={styles.loadMoreButton} onClick={loadMore}>
+              CARREGAR MAIS
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
