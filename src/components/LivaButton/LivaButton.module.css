@@ -129,6 +129,24 @@
   background-color: rgba(26, 165, 132, 0.1);
 }
 
+.blackOutline {
+  background-color: transparent;
+  color: var(--dark-gray);
+  border: 2px solid #000000;
+  font-weight: var(--font-weight-medium);
+}
+
+.blackOutline:hover:not(:disabled) {
+  background-color: #000000;
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.blackOutline:active:not(:disabled) {
+  transform: translateY(0);
+}
+
 .danger {
   background-color: #dc3545;
   color: var(--white);

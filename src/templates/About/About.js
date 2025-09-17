@@ -7,28 +7,23 @@ export default function About() {
     <section id="sobre" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.content}>
-          {/* Coluna esquerda - Collage de imagens */}
+          {/* Coluna esquerda - Imagem */}
           <div className={styles.imagesColumn}>
-            <div className={styles.imageGrid}>
-              <div className={`${styles.imageItem} ${styles.large}`}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    src="/images/about/about-main.png"
-                    alt="Sobre a Liva - Construímos confiança e realizamos sonhos"
-                    fill
-                    className={styles.aboutImage}
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/images/about/about-main.png"
+              alt="Sobre a Liva - Construímos confiança e realizamos sonhos"
+              width={472}
+              height={472}
+              className={styles.aboutImage}
+              priority
+            />
           </div>
 
           <div className={styles.textColumn}>
             <br />
             <div className={styles.textContent}>
               <h2 className={styles.title}>
-                Construímos confiança e<br />
+                Construímos confiança <br />e&nbsp;
                 <span className={styles.titleHighlight}>
                   realizamos sonhos!
                 </span>
@@ -39,7 +34,7 @@ export default function About() {
                 que abrigam histórias de vida e que são desenvolvidos para que
                 você viva momentos incríveis ao lado da sua família.
               </p>
-              <LivaButton type="outline">Saiba mais</LivaButton>
+              <LivaButton type="blackOutline">SAIBA MAIS</LivaButton>
             </div>
           </div>
         </div>

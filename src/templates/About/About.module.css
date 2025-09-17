@@ -20,45 +20,16 @@
 
 /* Coluna de Imagens */
 .imagesColumn {
-  position: relative;
-}
-
-.imageGrid {
-  position: relative;
-  height: 712px;
-}
-
-.imageItem {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.imageItem.large {
-  width: 100%;
-  height: 100%;
-}
-
-.imageContainer {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 712px;
 }
 
 .aboutImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease;
-}
-
-.imageItem:hover .aboutImage {
-  transform: scale(1.05);
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Coluna de Texto */
@@ -71,9 +42,9 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--dark-gray);
+  font-size: 48px;
+  font-weight: 400;
+  color: #03110d;
   margin-bottom: 2rem;
   line-height: 1.1;
 }
@@ -85,7 +56,7 @@
 .description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--dark-gray);
+  color: #393939;
   margin-bottom: 2rem;
 }
 
@@ -155,10 +126,6 @@
   .textContent {
     max-width: 100%;
   }
-
-  .imageGrid {
-    height: 500px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -168,10 +135,6 @@
 
   .description {
     font-size: 1rem;
-  }
-
-  .imageGrid {
-    height: 400px;
   }
 
   .features {
@@ -188,10 +151,6 @@
 @media (max-width: 480px) {
   .title {
     font-size: 1.75rem;
-  }
-
-  .imageGrid {
-    height: 350px;
   }
 
   .ctaButton {
