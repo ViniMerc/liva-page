@@ -117,7 +117,6 @@ export default function ContactForm() {
                     label="Telefone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="(11) 99999-9999"
                     required
                   />
 
@@ -128,7 +127,6 @@ export default function ContactForm() {
                     label="E-mail"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="seu@email.com"
                     required
                   />
 
@@ -140,7 +138,6 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    placeholder="Conte-nos sobre seu interesse..."
                     required
                   />
 

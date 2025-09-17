@@ -7,12 +7,10 @@ Carrossel
     Altura dessa bloco deve ser 751px
 
 Sobre 
-    Ajustar resolucao da imagem 
-    Ajustar estilos dos textos 
     Ajustar estilo do botao
 
 Formulario 
-    Ajustar estilos gerais
+    Ajustar imagem  do fundo  
     Adicionar envio do formulario
 
 Empreendimentos 
