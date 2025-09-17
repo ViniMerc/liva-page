@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import styles from "./Hero.module.css";
+import styles from "./Slides.module.css";
 
-export default function Hero() {
+export default function Slides() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Dados do empreendimento
@@ -35,7 +35,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className={styles.hero}>
+    <section id="home" className={styles.slidesContainer}>
       <div className={styles.carousel}>
         {/* Imagens do carrossel */}
         <div className={styles.slides}>

@@ -1,4 +1,4 @@
-.hero {
+.slidesContainer {
   position: relative;
   height: 100vh;
   min-height: 600px;
@@ -155,7 +155,7 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .hero {
+  .slidesContainer {
     height: 80vh;
     min-height: 500px;
   }
@@ -196,7 +196,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero {
+  .slidesContainer {
     height: 70vh;
     min-height: 400px;
   }

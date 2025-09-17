@@ -32,7 +32,7 @@ Site Liva construído com Next.js.
 
 - `src/app/` - Páginas e layout principal
 - `src/components/` - Componentes reutilizáveis (LivaButton, LivaField)
-- `src/templates/` - Templates das seções (Header, Hero, About, ContactForm, PropertiesGrid, Footer)
+- `src/templates/` - Templates das seções (Header, Slides, About, ContactForm, PropertiesGrid, Footer)
 - `public/` - Imagens, ícones e fontes
 
 ## 🏗️ Demonstração
