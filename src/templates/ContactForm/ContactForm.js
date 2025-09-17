@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./ContactForm.module.css";
+import LivaField from "../../components/LivaField/LivaField";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -76,68 +77,49 @@ export default function ContactForm() {
                 </h3>
 
                 <form onSubmit={handleSubmit} className={styles.form}>
-                  <div className={styles.formGroup}>
-                    <label htmlFor="name" className={styles.label}>
-                      Nome
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className={styles.input}
-                      required
-                    />
-                  </div>
+                  <LivaField
+                    type="text"
+                    id="name"
+                    name="name"
+                    label="Nome"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                  />
 
-                  <div className={styles.formGroup}>
-                    <label htmlFor="phone" className={styles.label}>
-                      Telefone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className={styles.input}
-                      placeholder="(11) 99999-9999"
-                      required
-                    />
-                  </div>
+                  <LivaField
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    label="Telefone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="(11) 99999-9999"
+                    required
+                  />
 
-                  <div className={styles.formGroup}>
-                    <label htmlFor="email" className={styles.label}>
-                      E-mail
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={styles.input}
-                      placeholder="seu@email.com"
-                      required
-                    />
-                  </div>
+                  <LivaField
+                    type="email"
+                    id="email"
+                    name="email"
+                    label="E-mail"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="seu@email.com"
+                    required
+                  />
 
-                  <div className={styles.formGroup}>
-                    <label htmlFor="message" className={styles.label}>
-                      Mensagem
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      className={styles.textarea}
-                      rows="4"
-                      placeholder="Conte-nos sobre seu interesse..."
-                      required
-                    />
-                  </div>
+                  <LivaField
+                    type="textarea"
+                    id="message"
+                    name="message"
+                    label="Mensagem"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    placeholder="Conte-nos sobre seu interesse..."
+                    required
+                  />
 
                   <button
                     type="submit"
