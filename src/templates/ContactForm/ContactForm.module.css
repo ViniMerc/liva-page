@@ -1,7 +1,10 @@
 .contact {
   padding: 0;
-  background: #000;
-  min-height: 100vh;
+  background: #03110d;
+  height: 638px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 300px;
 }
 
 .container {
@@ -13,12 +16,12 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
+  height: 638px;
 }
 
 /* Coluna Promocional (Esquerda) */
 .promoColumn {
-  background: #000;
+  background: #03110d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +62,7 @@
 
 .consultantsList {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 0;
 }
 
 .consultant {
@@ -67,33 +70,50 @@
   align-items: center;
 }
 
+.consultant:not(:first-child) {
+  margin-left: -12px;
+}
+
 .consultantAvatar {
-  width: 60px;
-  height: 60px;
-  background: #333;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  border: 2px solid #555;
+  border: 3px solid #fff;
+}
+
+.consultantAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 /* Coluna do Formulário (Direita) */
 .formColumn {
   position: relative;
-  background: url('/pexels-pixabay-265004 1.png') center/cover;
+  background: url("/images/contact/pexels-pixabay-265004 1.png") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xl);
 }
 
+.formColumn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(3, 17, 13, 0.7);
+  z-index: 1;
+}
+
 .formBackground {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .formContent {
@@ -154,21 +174,15 @@
 
 .submitButton {
   width: 100%;
-  background: #20B2AA;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 4 !important;
+  padding: 1rem 2rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
 }
 
 .submitButton:hover:not(:disabled) {
-  background: #1a9b94;
+  background: #1a9b94 !important;
   transform: translateY(-1px);
 }
 
@@ -193,21 +207,21 @@
 @media (max-width: 968px) {
   .content {
     grid-template-columns: 1fr;
-    min-height: auto;
+    height: auto;
   }
-  
+
   .promoColumn {
     order: 2;
     padding: var(--spacing-lg);
-    min-height: 50vh;
+    min-height: 319px;
   }
-  
+
   .formColumn {
     order: 1;
     padding: var(--spacing-lg);
-    min-height: 50vh;
+    min-height: 319px;
   }
-  
+
   .promoTitle {
     font-size: 2rem;
   }
@@ -217,20 +231,20 @@
   .promoTitle {
     font-size: 1.75rem;
   }
-  
+
   .formColumn {
     padding: var(--spacing-md);
   }
-  
+
   .formContent {
     max-width: 100%;
     padding: var(--spacing-lg);
   }
-  
+
   .consultantsList {
     justify-content: center;
   }
-  
+
   .consultantAvatar {
     width: 50px;
     height: 50px;
@@ -242,20 +256,20 @@
   .promoTitle {
     font-size: 1.5rem;
   }
-  
+
   .formColumn {
     padding: var(--spacing-sm);
   }
-  
+
   .formContent {
     padding: var(--spacing-md);
   }
-  
+
   .submitButton {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
   }
-  
+
   .consultantAvatar {
     width: 45px;
     height: 45px;

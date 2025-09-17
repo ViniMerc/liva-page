@@ -1,6 +1,8 @@
 .about {
   padding: var(--spacing-xl) 0;
   background: var(--white);
+  position: relative;
+  z-index: 1;
 }
 
 .container {

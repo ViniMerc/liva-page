@@ -23,4 +23,7 @@ Empreendimentos
 Footer
     Estilos Gerais
 
+Mobile
+    Menu burger 
+    Ajustar restante das sections
 
