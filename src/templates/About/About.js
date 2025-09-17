@@ -4,7 +4,7 @@ import LivaButton from "@/components/LivaButton/LivaButton";
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section id="sobre" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.content}>
           {/* Coluna esquerda - Collage de imagens */}

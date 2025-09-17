@@ -94,7 +94,7 @@ export default function PropertiesGrid() {
   };
 
   return (
-    <section className={styles.properties}>
+    <section id="empreendimentos" className={styles.properties}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>

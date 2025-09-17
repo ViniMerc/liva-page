@@ -48,7 +48,7 @@ export default function Hero() {
   };
 
   return (
-    <section className={styles.hero}>
+    <section id="home" className={styles.hero}>
       <div className={styles.carousel}>
         {/* Imagens do carrossel */}
         <div className={styles.slides}>

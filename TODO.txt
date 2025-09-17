@@ -1,8 +1,6 @@
 Header 
-    Ajuste de imagem da logo em resolucao maior 
-    ajuste das fontes usadas 
-    adicionar scroll to ao clicar no menu
-    
+     Ajustar o botao do whatsapp
+     
 Carrossel
     ajustar alinamento e estilo dos textos 
     ajustar botao de voltar da esquerda (icone nao deve ter opacidade)

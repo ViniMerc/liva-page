@@ -40,7 +40,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className={styles.contact}>
+    <section id="contato" className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.content}>
           {/* Coluna esquerda - Texto promocional */}

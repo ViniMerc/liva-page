@@ -4,7 +4,7 @@ import LivaButton from "../../components/LivaButton/LivaButton";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer id="noticias" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.column}>
