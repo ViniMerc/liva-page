@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import LivaButton from "../../components/LivaButton/LivaButton";
 import styles from "./PropertiesGrid.module.css";
 
 export default function PropertiesGrid() {
@@ -97,31 +98,71 @@ export default function PropertiesGrid() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Confira todos os{" "}
+            Confira todos os <br />
             <span className={styles.titleHighlight}>
               empreendimentos da Liva
             </span>
           </h2>
 
           <div className={styles.controls}>
-            <button className={styles.filterButton} onClick={toggleFilters}>
+            <LivaButton
+              type="outline"
+              onClick={toggleFilters}
+              className={styles.customFilterButton}
+              icon={
+                <Image
+                  src="/icons/filters-svg.svg"
+                  alt="Filtros"
+                  width={19}
+                  height={19}
+                />
+              }
+            >
               FILTROS
-            </button>
+            </LivaButton>
           </div>
         </div>
 
-        {/* Filtros (será implementado depois) */}
+        {/* Filtros */}
         {showFilters && (
           <div className={styles.filters}>
             <div className={styles.filterContent}>
-              <h3>Filtros</h3>
-              <p>Em breve - funcionalidade de filtros será implementada</p>
-              <button
-                className={styles.closeFilters}
-                onClick={() => setShowFilters(false)}
-              >
-                Fechar
-              </button>
+              <div className={styles.filterRow}>
+                <div className={styles.filterField}>
+                  <label htmlFor="estagio">Estágio do empreendimento</label>
+                  <select id="estagio" className={styles.filterSelect}>
+                    <option value="">Selecione o estágio</option>
+                    <option value="pre-lancamento">Pré Lançamento</option>
+                    <option value="lancamento">Lançamento</option>
+                    <option value="em-construcao">Em Construção</option>
+                    <option value="pronto">Pronto</option>
+                  </select>
+                </div>
+
+                <div className={styles.filterField}>
+                  <label htmlFor="localizacao">Localização</label>
+                  <select id="localizacao" className={styles.filterSelect}>
+                    <option value="">Selecione a localização</option>
+                    <option value="centro">Centro</option>
+                    <option value="zona-sul">Zona Sul</option>
+                    <option value="zona-norte">Zona Norte</option>
+                    <option value="zona-oeste">Zona Oeste</option>
+                    <option value="zona-leste">Zona Leste</option>
+                  </select>
+                </div>
+
+                <div className={styles.filterField}>
+                  <label htmlFor="tipo">Tipo de imóvel</label>
+                  <select id="tipo" className={styles.filterSelect}>
+                    <option value="">Selecione o tipo</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="casa">Casa</option>
+                    <option value="cobertura">Cobertura</option>
+                    <option value="studio">Studio</option>
+                    <option value="loft">Loft</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         )}
