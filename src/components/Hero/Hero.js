@@ -1,28 +1,29 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import styles from './Hero.module.css';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   // Dados do empreendimento
   const slides = [
     {
       id: 1,
-      image: '/images/carousel/barra-view-1.png',
-      alt: 'Barra View - Vista externa do empreendimento'
+      image: "/images/carousel/barra-view-1.png",
+      alt: "Barra View - Vista externa do empreendimento",
     },
     {
       id: 2,
-      image: '/images/carousel/barra-view-2.png',
-      alt: 'Barra View - Área de lazer'
+      image: "/images/carousel/barra-view-2.png",
+      alt: "Barra View - Área de lazer",
     },
     {
       id: 3,
-      image: '/images/carousel/barra-view-3.png',
-      alt: 'Barra View - Apartamento modelo'
-    }
+      image: "/images/carousel/barra-view-3.png",
+      alt: "Barra View - Apartamento modelo",
+    },
   ];
 
   // Auto-play do carrossel
@@ -54,13 +55,17 @@ export default function Hero() {
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
+              className={`${styles.slide} ${
+                index === currentSlide ? styles.active : ""
+              }`}
             >
               <div className={styles.imageContainer}>
-                <img 
-                  src={slide.image} 
+                <Image
+                  src={slide.image}
                   alt={slide.alt}
+                  fill
                   className={styles.slideImage}
+                  sizes="100vw"
                 />
               </div>
             </div>
@@ -73,51 +78,42 @@ export default function Hero() {
             <div className={styles.tag}>
               <span>PRÉ LANÇAMENTO</span>
             </div>
-            
+
             <h1 className={styles.title}>Barra View</h1>
-            
+
             <div className={styles.descriptionBox}>
               <span>Apartamento com 3 dormitórios sendo 1 suíte</span>
             </div>
-            
-            <button className={styles.ctaButton}>
-              SAIBA MAIS
-            </button>
+
+            <button className={styles.ctaButton}>SAIBA MAIS</button>
           </div>
         </div>
 
-        {/* Controles de navegação */}
-        <button 
+        <button
           className={`${styles.navButton} ${styles.prev}`}
           onClick={prevSlide}
           aria-label="Imagem anterior"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-          </svg>
+          <Image 
+            src="/icons/arrow-outlined-right-svgrepo-com 1 (1).svg" 
+            alt="Seta anterior" 
+            width="24" 
+            height="24"
+          />
         </button>
-        
-        <button 
+
+        <button
           className={`${styles.navButton} ${styles.next}`}
           onClick={nextSlide}
           aria-label="Próxima imagem"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-          </svg>
+          <Image 
+            src="/icons/arrow-outlined-right-svgrepo-com 1.svg" 
+            alt="Seta próxima" 
+            width="24" 
+            height="24"
+          />
         </button>
-
-        {/* Indicadores */}
-        <div className={styles.indicators}>
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.indicator} ${index === currentSlide ? styles.active : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Ir para imagem ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

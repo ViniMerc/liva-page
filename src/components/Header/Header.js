@@ -7,7 +7,7 @@ export default function Header() {
       <div className={styles.container}>
         <div className={styles.logo}>
           <div className={styles.logoIcon}>
-            <Image src="/liva 1.png" alt="Liva Logo" width="80" height="32" />
+            <Image src="/logos/liva 1.png" alt="Liva Logo" width="80" height="32" />
           </div>
         </div>
 
@@ -34,10 +34,10 @@ export default function Header() {
         <div className={styles.rightSection}>
           <div className={styles.social}>
             <a href="#" aria-label="Facebook">
-              <Image src="/Vector (2).svg" alt="Facebook" width="25" height="25" />
+              <Image src="/icons/Vector (2).svg" alt="Facebook" width="25" height="25" />
             </a>
             <a href="#" aria-label="Instagram">
-              <Image src="/Vector.svg" alt="Instagram" width="26" height="25" />
+              <Image src="/icons/Vector.svg" alt="Instagram" width="26" height="25" />
             </a>
           </div>
 
@@ -47,7 +47,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className={styles.whatsappButton}
             >
-              <Image src="/whatsapp.svg" alt="WhatsApp" width="20" height="20" />
+              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" />
               <span>WHATSAPP</span>
             </a>
           </div>

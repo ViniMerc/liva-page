@@ -56,7 +56,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 2;
-  padding: 4rem 0 0 4rem;
+  padding: 2rem 0 0 2rem;
 }
 
 .overlayContent {
@@ -68,13 +68,11 @@
 
 .tag {
   display: inline-block;
-  background: var(--white);
-  color: var(--black);
+  color: var(--wwhite);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: var(--spacing-md);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -131,8 +129,8 @@
   background: var(--black);
   border: none;
   color: var(--white);
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 0;
   cursor: pointer;
   display: flex;
@@ -148,39 +146,12 @@
 }
 
 .navButton.prev {
-  left: var(--spacing-lg);
+  left: 0;
+  opacity: 0.4;
 }
 
 .navButton.next {
-  right: var(--spacing-lg);
-}
-
-.indicators {
-  position: absolute;
-  bottom: var(--spacing-lg);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: var(--spacing-xs);
-  z-index: 3;
-}
-
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid var(--white);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.indicator.active {
-  background: var(--white);
-}
-
-.indicator:hover {
-  background: rgba(255, 255, 255, 0.7);
+  right: 0;
 }
 
 /* Responsividade */
@@ -189,37 +160,37 @@
     height: 80vh;
     min-height: 500px;
   }
-  
+
   .overlay {
-    padding: 2rem 0 0 2rem;
+    padding: 1.5rem 0 0 1.5rem;
   }
-  
+
   .title {
     font-size: 2.5rem;
   }
-  
+
   .descriptionBox span {
     font-size: 0.9rem;
   }
-  
+
   .ctaButton {
     padding: 0.8rem 2rem;
     font-size: 0.9rem;
   }
-  
+
   .navButton {
     width: 40px;
     height: 40px;
   }
-  
+
   .navButton.prev {
     left: var(--spacing-sm);
   }
-  
+
   .navButton.next {
     right: var(--spacing-sm);
   }
-  
+
   .indicators {
     bottom: var(--spacing-md);
   }
@@ -230,24 +201,24 @@
     height: 70vh;
     min-height: 400px;
   }
-  
+
   .overlay {
-    padding: 1.5rem 0 0 1.5rem;
+    padding: 1rem 0 0 1rem;
   }
-  
+
   .title {
     font-size: 2rem;
   }
-  
+
   .descriptionBox span {
     font-size: 0.8rem;
   }
-  
+
   .ctaButton {
     padding: 0.7rem 1.5rem;
     font-size: 0.8rem;
   }
-  
+
   .tag {
     font-size: 0.7rem;
     padding: 0.4rem 0.8rem;
