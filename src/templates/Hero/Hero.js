@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 
@@ -26,25 +26,12 @@ export default function Hero() {
     },
   ];
 
-  // Auto-play do carrossel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Muda a cada 5 segundos
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
   };
 
   return (
@@ -94,10 +81,10 @@ export default function Hero() {
           onClick={prevSlide}
           aria-label="Imagem anterior"
         >
-          <Image 
-            src="/icons/arrow-outlined-right-svgrepo-com 1 (1).svg" 
-            alt="Seta anterior" 
-            width="24" 
+          <Image
+            src="/icons/arrow-outlined-right-svgrepo-com 1 (1).svg"
+            alt="Seta anterior"
+            width="24"
             height="24"
           />
         </button>
@@ -107,10 +94,10 @@ export default function Hero() {
           onClick={nextSlide}
           aria-label="Próxima imagem"
         >
-          <Image 
-            src="/icons/arrow-outlined-right-svgrepo-com 1.svg" 
-            alt="Seta próxima" 
-            width="24" 
+          <Image
+            src="/icons/arrow-outlined-right-svgrepo-com 1.svg"
+            alt="Seta próxima"
+            width="24"
             height="24"
           />
         </button>

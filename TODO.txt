@@ -25,3 +25,5 @@ Mobile
     Menu burger 
     Ajustar restante das sections
 
+Geral 
+    Conferir o  "use client"
