@@ -78,23 +78,15 @@
 }
 
 .whatsappButton {
-  background: var(--primary-green);
-  color: var(--white);
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
-  text-decoration: none;
-  font-weight: var(--font-weight-semibold);
+  font-weight: 200;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.whatsappButton:hover {
-  background: #48B79D;
 }
 
 /* Botão Menu Mobile */
@@ -106,7 +98,6 @@
   padding: 0;
   z-index: 1001;
 }
-
 
 /* Menu Mobile Overlay */
 .mobileMenuOverlay {
@@ -225,7 +216,7 @@
 }
 
 .mobileWhatsappButton:hover {
-  background: #48B79D;
+  background: #48b79d;
 }
 
 /* Responsividade */

@@ -15,6 +15,7 @@ Empreendimentos
     Ajustar resolucao das imagens maiores 
     Ajustar overlay ao passar o mouse
     Ajustar os filtros 
+    Ajustar botao de filtros
 
 Footer
     Estilos Gerais

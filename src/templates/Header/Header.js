@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import LivaButton from "../../components/LivaButton/LivaButton";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -116,21 +117,21 @@ export default function Header() {
             </a>
           </div>
 
-          <div className={styles.whatsapp}>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.whatsappButton}
-            >
+          <LivaButton
+            type="primary"
+            size="medium"
+            icon={
               <Image
                 src="/icons/whatsapp.svg"
                 alt="Ícone do WhatsApp"
                 width="20"
                 height="20"
               />
-              <span>WHATSAPP</span>
-            </a>
-          </div>
+            }
+            className={styles.whatsappButton}
+          >
+            WHATSAPP
+          </LivaButton>
         </div>
       </div>
 
@@ -190,7 +191,10 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="#contato" onClick={(e) => handleNavClick(e, "contato")}>
+                  <a
+                    href="#contato"
+                    onClick={(e) => handleNavClick(e, "contato")}
+                  >
                     CONTATO
                   </a>
                 </li>
@@ -219,19 +223,21 @@ export default function Header() {
               </div>
 
               <div className={styles.mobileWhatsapp}>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <LivaButton
+                  type="primary"
+                  size="medium"
+                  icon={
+                    <Image
+                      src="/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      width="20"
+                      height="20"
+                    />
+                  }
                   className={styles.mobileWhatsappButton}
                 >
-                  <Image
-                    src="/icons/whatsapp.svg"
-                    alt="WhatsApp"
-                    width="20"
-                    height="20"
-                  />
-                  <span>WHATSAPP</span>
-                </a>
+                  WHATSAPP
+                </LivaButton>
               </div>
             </div>
           </div>
