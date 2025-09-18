@@ -140,40 +140,6 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.formGroup {
-  margin-bottom: var(--spacing-md);
-}
-
-.label {
-  display: block;
-  font-weight: 600;
-  color: var(--dark-gray);
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.input,
-.textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-  font-family: inherit;
-  background: white;
-}
-
-.input:focus,
-.textarea:focus {
-  outline: none;
-  border-color: #000;
-}
-
-.textarea {
-  resize: vertical;
-  min-height: 100px;
-}
 
 .submitButton {
   width: 100%;

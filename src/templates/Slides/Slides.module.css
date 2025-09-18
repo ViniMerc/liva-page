@@ -69,8 +69,7 @@
 
 .tag {
   display: inline-block;
-  color: var(--wwhite);
- 
+  color: var(--white);
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -201,9 +200,6 @@
     right: var(--spacing-sm);
   }
 
-  .indicators {
-    bottom: var(--spacing-md);
-  }
 }
 
 @media (max-width: 480px) {

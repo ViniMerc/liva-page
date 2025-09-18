@@ -30,16 +30,6 @@
   margin-bottom: 20px;
 }
 
-.logoIcon {
-  color: #9ca3af;
-}
-
-.logoText {
-  font-size: 24px;
-  font-weight: 400;
-  color: #9ca3af;
-  text-transform: lowercase;
-}
 
 .description {
   font-size: 14px;
@@ -205,9 +195,6 @@
     padding: 40px 0 0 0;
   }
 
-  .logoText {
-    font-size: 20px;
-  }
 
   .columnTitle {
     font-size: 14px;
