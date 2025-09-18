@@ -1,28 +1,16 @@
-
 Carrossel
     ajustar alinamento e estilo dos textos 
     ajustar botao de voltar da esquerda (icone nao deve ter opacidade)
 
-
- 
 Formulario 
     Ajustar imagem  do fundo  
-    Adicionar envio do formulario
-
+ 
 Empreendimentos 
     Ajustar resolucao das imagens maiores 
-    Ajustar overlay ao passar o mouse
-    Ajustar os filtros 
     Ajustar botao de filtros
 
 Footer
-    Estilos Gerais
-
-Mobile
-    Ajustar o carrossel
-    Ajsutar o sobre
-    Ajustar o contato
-    Ajustar as propriedades
+    Alinhamento dos itens
 
 Geral 
     Conferir o  "use client"
