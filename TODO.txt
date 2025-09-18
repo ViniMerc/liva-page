@@ -4,9 +4,7 @@ Carrossel
     ajustar botao de voltar da esquerda (icone nao deve ter opacidade)
 
 
-Sobre 
-    Ajustar estilo do botao
-
+ 
 Formulario 
     Ajustar imagem  do fundo  
     Adicionar envio do formulario

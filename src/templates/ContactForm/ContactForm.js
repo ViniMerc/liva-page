@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./ContactForm.module.css";
 import LivaField from "../../components/LivaField/LivaField";
 import LivaButton from "../../components/LivaButton/LivaButton";
+import SuccessModal from "../../components/SuccessModal/SuccessModal";
 
 export default function ContactForm() {
   const nameRef = useRef(null);
@@ -20,7 +21,7 @@ export default function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [errors, setErrors] = useState({
     name: false,
     phone: false,
@@ -96,10 +97,16 @@ export default function ContactForm() {
     // Simular envio do formulário
     setTimeout(() => {
       console.log("Dados do formulário:", formData);
-      setSubmitStatus("success");
+      setShowSuccessModal(true);
       setIsSubmitting(false);
 
-      setTimeout(() => setSubmitStatus(null), 3000);
+      // Limpar o formulário após sucesso
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
     }, 1000);
   };
 
@@ -120,6 +127,10 @@ export default function ContactForm() {
       setErrors((prev) => ({ ...prev, phone: invalid }));
       return;
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
   };
 
   return (
@@ -182,7 +193,7 @@ export default function ContactForm() {
                   Fale agora mesmo com a Liva
                 </h3>
 
-                <form onSubmit={handleSubmit} className={styles.form}>
+                <form onSubmit={handleSubmit} className={styles.form} noValidate>
                   <LivaField
                     type="text"
                     id="name"
@@ -255,13 +266,6 @@ export default function ContactForm() {
                   >
                     {isSubmitting ? "Enviando..." : "ENVIAR MENSAGEM"}
                   </LivaButton>
-
-                  {submitStatus === "success" && (
-                    <div className={styles.successMessage}>
-                      ✅ Mensagem enviada com sucesso! Entraremos em contato em
-                      breve.
-                    </div>
-                  )}
                 </form>
               </div>
             </div>
@@ -305,6 +309,12 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
+
+      <SuccessModal
+        isOpen={showSuccessModal}
+        onClose={handleCloseModal}
+        autoCloseDelay={5000}
+      />
     </section>
   );
 }
