@@ -1,5 +1,4 @@
 Carrossel
-    ajustar alinamento e estilo dos textos 
     ajustar botao de voltar da esquerda (icone nao deve ter opacidade)
 
 Formulario 

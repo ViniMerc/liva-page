@@ -80,14 +80,14 @@
   font-size: 80px;
   font-weight: bold;
   margin-bottom: 6px;
-   
+  margin-left: -4;
   line-height: 1.1;
 }
 
 .descriptionBox {
   background: var(--light-green);
-  color: var(--black);
-  padding: 0.75rem 1.5rem;
+  color: #03110D;
+  padding: 0.25rem 0.75rem;
   border-radius: 4px;
   margin-bottom: var(--spacing-lg);
   display: inline-block;
@@ -113,13 +113,6 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.ctaButton:hover {
-  background: var(--white);
-  color: var(--primary-green);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
 .navButton {
   position: absolute;
   top: 50%;
@@ -136,11 +129,6 @@
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 3;
-}
-
-.navButton:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: translateY(-50%) scale(1.05);
 }
 
 .navButton.prev {
@@ -199,7 +187,6 @@
   .navButton.next {
     right: var(--spacing-sm);
   }
-
 }
 
 @media (max-width: 480px) {
