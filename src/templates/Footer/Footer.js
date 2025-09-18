@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.column}>
-            <h4 className={styles.columnTitle}>NAVEGUE NO SITE</h4>
+            <h2 className={styles.columnTitle}>NAVEGUE NO SITE</h2>
             <ul className={styles.links}>
               <li>
                 <a href="#home">HOME</a>

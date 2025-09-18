@@ -153,10 +153,6 @@
   height: 280px;
 }
 
-.propertyCard:hover {
-  box-shadow: var(--shadow-lg);
-}
-
 .featuredCard {
   grid-row: 1 / 3;
   grid-column: 1 / 3;
@@ -226,9 +222,39 @@
   padding: var(--spacing-md);
 }
 
-.propertyCard:hover .hoverOverlay {
+/* Hover overlay apenas para o card featured e somente em desktop */
+.featuredCard:hover .hoverOverlay {
   opacity: 1;
   visibility: visible;
+}
+
+/* Esconder elementos de fundo quando o overlay estiver ativo */
+.featuredCard:hover .statusTag {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.featuredCard:hover .propertyNameOverlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .featuredCard:hover .hoverOverlay {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Em mobile, manter os elementos originais visíveis */
+  .featuredCard:hover .statusTag {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .featuredCard:hover .propertyNameOverlay {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .overlayContent {
