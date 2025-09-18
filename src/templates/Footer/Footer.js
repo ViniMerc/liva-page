@@ -51,7 +51,7 @@ export default function Footer() {
               <div className={styles.social}>
                 <a href="#" aria-label="Facebook" className={styles.socialIcon}>
                   <Image
-                    src="/icons/Vector (2).svg"
+                    src="/icons/facebook-icon.svg"
                     alt="Facebook"
                     width="25"
                     height="25"
@@ -64,7 +64,7 @@ export default function Footer() {
                   className={styles.socialIcon}
                 >
                   <Image
-                    src="/icons/Vector.svg"
+                    src="/icons/instagram-icon.svg"
                     alt="Instagram"
                     width="26"
                     height="25"

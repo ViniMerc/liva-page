@@ -101,7 +101,7 @@ export default function Header() {
           <div className={styles.social}>
             <a href="#" aria-label="Facebook">
               <Image
-                src="/icons/Vector (2).svg"
+                src="/icons/facebook-icon.svg"
                 alt="Facebook"
                 width="25"
                 height="25"
@@ -109,7 +109,7 @@ export default function Header() {
             </a>
             <a href="#" aria-label="Instagram">
               <Image
-                src="/icons/Vector.svg"
+                src="/icons/instagram-icon.svg"
                 alt="Instagram"
                 width="26"
                 height="25"
@@ -206,7 +206,7 @@ export default function Header() {
               <div className={styles.mobileSocial}>
                 <a href="#" aria-label="Facebook">
                   <Image
-                    src="/icons/Vector (2).svg"
+                    src="/icons/facebook-icon.svg"
                     alt="Facebook"
                     width="25"
                     height="25"
@@ -214,7 +214,7 @@ export default function Header() {
                 </a>
                 <a href="#" aria-label="Instagram">
                   <Image
-                    src="/icons/Vector.svg"
+                    src="/icons/instagram-icon.svg"
                     alt="Instagram"
                     width="26"
                     height="25"

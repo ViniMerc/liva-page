@@ -85,7 +85,7 @@ export default function Slides() {
           aria-label="Imagem anterior"
         >
           <Image
-            src="/icons/arrow-outlined-right-svgrepo-com 1 (1).svg"
+            src="/icons/arrow-left.svg"
             alt="Seta anterior"
             width="24"
             height="24"
@@ -98,7 +98,7 @@ export default function Slides() {
           aria-label="Próxima imagem"
         >
           <Image
-            src="/icons/arrow-outlined-right-svgrepo-com 1.svg"
+            src="/icons/arrow-right.svg"
             alt="Seta próxima"
             width="24"
             height="24"

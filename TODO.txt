@@ -11,7 +11,4 @@ Empreendimentos
 
 Footer
     Alinhamento dos itens
-
-Geral 
-    Conferir o  "use client"
-    Conferir os buttons
+ 
