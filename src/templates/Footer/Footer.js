@@ -92,7 +92,14 @@ export default function Footer() {
             <LivaButton
               type="primary"
               size="medium"
-              icon={<Image src="/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" />}
+              icon={
+                <Image
+                  src="/icons/whatsapp.svg"
+                  alt="Ícone do WhatsApp"
+                  width="20"
+                  height="20"
+                />
+              }
               className={styles.whatsappButton}
             >
               WHATSAPP

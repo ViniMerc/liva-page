@@ -34,7 +34,7 @@ export default function About() {
                 que abrigam histórias de vida e que são desenvolvidos para que
                 você viva momentos incríveis ao lado da sua família.
               </p>
-              <LivaButton type="blackOutline">SAIBA MAIS</LivaButton>
+              <LivaButton type="outline">SAIBA MAIS</LivaButton>
             </div>
           </div>
         </div>

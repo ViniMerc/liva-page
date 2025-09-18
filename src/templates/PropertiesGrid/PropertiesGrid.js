@@ -134,7 +134,7 @@ export default function PropertiesGrid() {
               icon={
                 <Image
                   src="/icons/filters-svg.svg"
-                  alt="Filtros"
+                  alt="Ícone de filtros"
                   width={19}
                   height={19}
                 />
@@ -251,9 +251,14 @@ export default function PropertiesGrid() {
         {/* Botão Carregar Mais */}
         {!isMobile && (
           <div className={styles.loadMoreContainer}>
-            <button className={styles.loadMoreButton} onClick={loadMore}>
+            <LivaButton 
+              type="outline" 
+              size="medium" 
+              onClick={loadMore}
+              className={styles.loadMoreButton}
+            >
               CARREGAR MAIS
-            </button>
+            </LivaButton>
           </div>
         )}
       </div>

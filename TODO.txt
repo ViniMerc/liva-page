@@ -27,3 +27,4 @@ Mobile
 
 Geral 
     Conferir o  "use client"
+    Conferir os buttons

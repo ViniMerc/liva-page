@@ -124,7 +124,7 @@ export default function Header() {
             >
               <Image
                 src="/icons/whatsapp.svg"
-                alt="WhatsApp"
+                alt="Ícone do WhatsApp"
                 width="20"
                 height="20"
               />

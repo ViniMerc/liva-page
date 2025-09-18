@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import LivaButton from "../../components/LivaButton/LivaButton";
 import styles from "./Slides.module.css";
 
 export default function Slides() {
@@ -72,7 +73,9 @@ export default function Slides() {
               <span>Apartamento com 3 dormitórios sendo 1 suíte</span>
             </div>
 
-            <button className={styles.ctaButton}>SAIBA MAIS</button>
+            <LivaButton type="outlineWhite" size="medium" className={styles.ctaButton}>
+              SAIBA MAIS
+            </LivaButton>
           </div>
         </div>
 
