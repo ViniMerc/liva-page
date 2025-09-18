@@ -94,7 +94,7 @@
 }
 
 .whatsappButton:hover {
-  background: var(--light-green);
+  background: #48B79D;
 }
 
 /* Botão Menu Mobile */
@@ -225,7 +225,7 @@
 }
 
 .mobileWhatsappButton:hover {
-  background: var(--light-green);
+  background: #48B79D;
 }
 
 /* Responsividade */

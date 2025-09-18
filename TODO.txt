@@ -1,10 +1,8 @@
-Header 
-     Ajustar o botao do whatsapp
-     
+
 Carrossel
     ajustar alinamento e estilo dos textos 
     ajustar botao de voltar da esquerda (icone nao deve ter opacidade)
-    Altura dessa bloco deve ser 751px
+
 
 Sobre 
     Ajustar estilo do botao
